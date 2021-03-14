@@ -1,0 +1,14 @@
+CXX = g++
+CXXFLAGS = -g -Wall
+EXECUTABLE = tests
+SHARED-LIB = lab3
+BUILD_FOLDER_PATH = ../build/
+LIB_PATH = ../src/libs/
+TEST_LIB_PATH = ./libs
+
+build:
+	$(CXX) $(CXXFLAGS) *.cpp -l$(SHARED-LIB) -I$(LIB_PATH) -I$(TEST_LIB_PATH) -L../build -o $(BUILD_FOLDER_PATH)$(EXECUTABLE)
+
+test: build
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(BUILD_FOLDER_PATH) &&\
+	$(BUILD_FOLDER_PATH)$(EXECUTABLE)
