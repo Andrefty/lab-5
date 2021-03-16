@@ -12,6 +12,18 @@ test: build
 	cd ./tests &&\
 	make test
 
+test-c1: build
+	cd ./tests &&\
+	make test-c1
+
+test-c2: build
+	cd ./tests &&\
+	make test-c2
+
+test-c4: build
+	cd ./tests &&\
+	make test-c4
+
 
 build-dir: clean
 	mkdir $(BUILD_FOLDER_PATH)

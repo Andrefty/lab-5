@@ -1,5 +1,5 @@
 <h2 align="center">
- lab-03: Arbori binari
+ lab-05: Arbori binari
 </h2>
 
 <h4>Cerințe:</h4>
