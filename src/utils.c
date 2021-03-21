@@ -20,3 +20,11 @@ bool isNull(void *argument)
 bool isNotNull(void *argument) {
     return !isNull(argument);
 }
+
+int getNumberOfNodes(TreeNode* root) {
+    if (root == NULL) {
+        return 0;
+    } else {
+        return 1 + getNumberOfNodes(root->left) + getNumberOfNodes(root->right);
+    }
+}

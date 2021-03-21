@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <limits.h>
 #include <string.h>
+#include "tree.h"
 
 
 #define TEST_FILE1 "../data/data1.txt"
@@ -35,4 +36,11 @@ bool isNull(void *argument);
  * @return true or false
  */
 bool isNotNull(void *argument);
+
+/**
+ * @brief Functie ce returneaza numarul de noduri dintr-un arbore.
+ * @param root - radacina arborelui al carui numar de noduri trebuie aflat
+ * @return - numarul de noduri al arborelui dat prin radacina root.
+*/
+int getNumberOfNodes(TreeNode* root);
 

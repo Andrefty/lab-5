@@ -1,6 +1,7 @@
 #include "tree.h"
 #include "stack.h"
 /**
+ * CERINTA 1
 * TODO: Implementarea functiei createBalanced descrisa in curs.
 * @param N - numarul de noduri din arbore
 * @param f - fisierul din care se vor citi valorile pentru nodurile arborelui
@@ -11,7 +12,11 @@ TreeNode* createBalanced(int N, FILE *f) {
 }
 
 /**
- * TODO: implementarea ITERATIVA functiei de parcurgere SRD(inordine) a unui arbore binar
+ * CERINTA 2
+ * TODO: implementarea ITERATIVA functiei de parcurgere SRD(inordine) a unui arbore binar.
+ * Stiva este implementata folosind un vector(vezi stack.h). In functia inorderIterative, se transmite
+ * radacina arborelui si un vector in care sa stocati valorile obtinute in urma parcurgerii precum si numarul
+ * de elemente din arbore presupus cunoscut(cel de la cerinta 1).
  * @param root - nodul radacina al arborelui creat la cerinta anterioara cu functia createBalanced
  * @param arr - vector in care trebuie sa adaugati nodurile arborelui pe masura ce il parcurgeti
  * @param size - numarul de noduri din arbore.
@@ -23,6 +28,7 @@ void inorderIterative(TreeNode* root, TreeNode **arr, int size) {
 }
 
 /**
+ * CERINTA 3
  * TODO: Implementarea functiei pentru eliberarea spatiului ocupat de un arbore.
  * @param root - radacina arborelui ce trebuie eliberat.
  */
@@ -31,6 +37,7 @@ void deleteTree(TreeNode* root) {
 }
 
 /**
+ * CERINTA 4
  * TODO: Implementarea functiei pentru gasirea celui mai apropiat stramos comun(LCA) a doua noduri date(LCA)
  *  pentru doua noduri n1 si n1.LCA este cel mai adanc(de jos nod) care ii are pe n1 si n1 ca descendenti
  * @param root - nodul radacina al arborelui
