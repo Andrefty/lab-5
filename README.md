@@ -23,6 +23,7 @@ LCA a doua noduri a si b este cel mai adanc (de jos nod) care ii are pe a si b c
 Exemplu: LCA pentru 6 si 1 e 8
 {4, 8, 5, 7} - calea de la radacina la nodul 6
 {4, 8}  - calea de la radacina la nodul 1
+
 **Solutie iterativa:** se salveaza caile de la radacina la nodul a si de la radacina la nodul b in 2 vectori. 
 Apoi se parcurg vectorii pana cand se gasesc 2 valori diferite (sau nu mai sunt elemente in vreunul dintre cei doi vectori). Ultima valoare egala era cea a LCA. 
 
