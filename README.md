@@ -12,7 +12,7 @@ Stiva este implementata folosind un vector (vezi stack.h). In functia inorderIte
     * radacina arborelui si un vector in care se stocheaza valorile obtinute in urma parcurgerii, precum si numarul de elemente din arbore (presupus cunoscut).
 
 3. Implementati o functie pentru eliberarea spatiul ocupat de un arbore binar (iterativ sau recursiv).
-4. 
+
 **Idee solutie recursiva** – parcurgeti arborele in postordine (SDR) si eliberati spatiul pentru nodurile din stanga si dreapta inainte de a elibera spatiul ocupat de radacina. Se elibereaza mai intai spatiul ocupat de nodurile cele mai din stanga jos, apoi cele din dreapta jos.
 
 **Idee solutie iterativa** – parcurgeti arborele pe niveluri. Stergeti fiecare nod din coada dupa ce ati adaugat copiii acelui nod (in coada) pentru a fi procesati. Se elibereaza mai intai spatiul  ocupat de nodurile cele mai de sus, tinand minte adresele copiilor.
