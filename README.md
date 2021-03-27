@@ -17,6 +17,6 @@ Idee solutie iterativa – parcurgeti arborele pe niveluri. Ideea e sa stergeti 
 4. Implementati o functie (iterativ sau recursiv) pentru gasirea celui mai apropiat stramos comun  a doua noduri (Lowest Common Ancestor - LCA) date prin valoarea lor (toate elementele din arbore au valori distincte).
 LCA a doua noduri a si b este cel mai adanc (de jos nod) care ii are pe a si b ca descendenti.
 
+![lca](https://user-images.githubusercontent.com/49961252/112722451-5305bb80-8f12-11eb-8459-e8893fcf1c46.png)
 
-![alt tag](https://prnt.sc/10x317b)
 
