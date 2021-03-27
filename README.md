@@ -18,5 +18,5 @@ Idee solutie iterativa – parcurgeti arborele pe niveluri. Ideea e sa stergeti 
 LCA a doua noduri a si b este cel mai adanc (de jos nod) care ii are pe a si b ca descendenti.
 
 
-![alt text](https://prnt.sc/10x317b)
+![alt tag](https://prnt.sc/10x317b)
 
