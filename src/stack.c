@@ -4,7 +4,7 @@ Stack* createStack(int capacity) {
     Stack* stack = (Stack*)malloc(sizeof(Stack));
     stack->capacity = capacity;
     stack->top = -1;
-    stack->arr = (TreeNode**)malloc(sizeof(TreeNode) * stack->capacity);
+    stack->arr = (TreeNode**)malloc(sizeof(TreeNode*) * stack->capacity);
     return stack;
 }
 
