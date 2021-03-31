@@ -7,8 +7,20 @@
 * @param f - fisierul din care se vor citi valorile pentru nodurile arborelui
 * Valorile sunt stocate in fisier sub forma: 1 2 3 4(pe un rand separate de un spatiu) 
 */
-TreeNode* createBalanced(int N, FILE *f) {
-    // TODO
+TreeNode *createBalanced(int N, FILE *f)
+{
+    int data;
+    if (N > 0)
+    {
+        TreeNode *rad = (TreeNode *)malloc(sizeof(TreeNode));
+        fscanf(f, "%d", &data);
+        (rad->val) = data;
+        rad->left = createBalanced(N / 2, f);
+        rad->right = createBalanced(N - 1 - N / 2, f);
+        return rad;
+    }
+    else
+        return NULL;
 }
 
 /**
@@ -23,8 +35,46 @@ TreeNode* createBalanced(int N, FILE *f) {
  * HINT: Pentru implementare folositi-va de implementarea stivei, vedeti fisierul stack.h
  * OBSERVATIE: Odata parcurs un nod, acesta trebuie adaugat in vectorul arr. Trebuie adaugat tot nodul, NU valoarea.
  */
-void inorderIterative(TreeNode* root, TreeNode **arr, int size) {
-  // TODO
+void inorderIterative(TreeNode *root, TreeNode **arr, int size)
+{
+    // TODO
+    int i = 0;
+    Stack *S = createStack(size);
+
+    while (1)
+    {
+        while (root)
+        {
+            push(S, root);
+            root = root->left;
+        }
+        if (isEmpty(S))
+            break;
+        root = pop(S);
+        if (root != NULL)
+        {
+            printf("%d ", root->val);
+            arr[i++] = root;
+        }
+        root = root->right;
+        
+    }
+    // int i=0;
+    // Stack *S = createStack(size);
+    // while (1)
+    // {
+    //     while (root)
+    //     {
+
+    //         printf("%d ", root->val);
+    //         arr[i++]=root;
+    //         push(S, root);
+    //         root = root->left;
+    //     }
+    //     if (isEmpty(S)) break;
+    //     root = pop(S);
+    //     root = root-> right;
+    // }
 }
 
 /**
@@ -32,7 +82,8 @@ void inorderIterative(TreeNode* root, TreeNode **arr, int size) {
  * TODO: Implementarea functiei pentru eliberarea spatiului ocupat de un arbore.
  * @param root - radacina arborelui ce trebuie eliberat.
  */
-void deleteTree(TreeNode* root) {
+void deleteTree(TreeNode *root)
+{
     // TODO
 }
 
@@ -43,7 +94,8 @@ void deleteTree(TreeNode* root) {
  * @param root - nodul radacina al arborelui
  * @param n1 - nodul 1 pentru cautare LCA
  * @param n2 - nodul 2 pentru cautare LCA
- */ 
-TreeNode* LCA(TreeNode* root, TreeNode* n1, TreeNode* n2) {
-    // TODO 
+ */
+TreeNode *LCA(TreeNode *root, TreeNode *n1, TreeNode *n2)
+{
+    // TODO
 }
