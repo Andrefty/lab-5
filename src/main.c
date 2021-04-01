@@ -1,5 +1,6 @@
 #include "tree.h"
 #include "utils.h"
+#include "stack.h"
 
 int main()
 {
@@ -9,5 +10,20 @@ int main()
 	int treeSize;
 	fscanf(f, "%d\n", &treeSize);
 	TreeNode* root = createBalanced(treeSize, f);
+	 int i=0;
+    Stack *S = createStack(treeSize);
+    while (1)
+    {
+        while (root)
+        {
+
+            printf("%d ", root->val);
+            push(S, root);
+            root = root->left;
+        }
+        if (isEmpty(S)) break;
+        root = pop(S);
+        root = root-> right;
+    }
 	return 0;
 }
