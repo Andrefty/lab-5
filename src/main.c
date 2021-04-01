@@ -9,21 +9,40 @@ int main()
 	FILE *f = openFile("../data/test-createbalanced.txt", READ_MODE);
 	int treeSize;
 	fscanf(f, "%d\n", &treeSize);
-	TreeNode* root = createBalanced(treeSize, f);
-	 int i=0;
-    Stack *S = createStack(treeSize);
-    while (1)
-    {
-        while (root)
-        {
+	TreeNode *root = createBalanced(treeSize, f);
+	TreeNode *temp = root;
+	int i = 0;
+	Stack *S = createStack(treeSize);
+	while (1)
+	{
+		while (root)
+		{
 
-            printf("%d ", root->val);
-            push(S, root);
-            root = root->left;
-        }
-        if (isEmpty(S)) break;
-        root = pop(S);
-        root = root-> right;
-    }
+			printf("%d ", root->val);
+			push(S, root);
+			root = root->left;
+		}
+		if (isEmpty(S))
+			break;
+		root = pop(S);
+		root = root->right;
+	}
+	printf("\n\n");
+	deleteTree(temp);
+	Stack *G = createStack(treeSize);
+	while (1)
+	{
+		while (root)
+		{
+
+			printf("%d ", root->val);
+			push(G, root);
+			root = root->left;
+		}
+		if (isEmpty(G))
+			break;
+		root = pop(G);
+		root = root->right;
+	}
 	return 0;
 }
