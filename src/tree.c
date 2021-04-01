@@ -87,7 +87,7 @@ void deleteTree(TreeNode *root)
     // TODO
     int i = 0;
     Stack *S = createStack(getNumberOfNodes(root));
-
+    TreeNode *temp;
     while (1)
     {
         while (root)
@@ -98,11 +98,12 @@ void deleteTree(TreeNode *root)
         if (isEmpty(S))
             break;
         root = pop(S);
-        if (root != NULL)
-        {
-            free(root);
-        }
+        temp=root;
         root = root->right;
+        if (temp != NULL)
+        {
+            free(temp);
+        }
     }
 }
 /**
