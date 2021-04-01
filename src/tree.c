@@ -1,5 +1,6 @@
 #include "tree.h"
 #include "stack.h"
+#include "utils.h"
 /**
  * CERINTA 1
 * TODO: Implementarea functiei createBalanced descrisa in curs.
@@ -85,21 +86,28 @@ void inorderIterative(TreeNode *root, TreeNode **arr, int size)
 void deleteTree(TreeNode *root)
 {
     // TODO
-    int i=0;
+    int i = 0;
+    Stack *S = createStack(getNumberOfNodes(root));
+
     while (1)
     {
         while (root)
         {
-
-            printf("%d ", root->val);
+            push(S, root);
             root = root->left;
         }
-        TreeNode *tem=root;
-        root = root-> right;
-        free(tem);
+        if (isEmpty(S))
+            break;
+        root = pop(S);
+        if (root != NULL)
+        {
+            free(root);
+            
+        }
+        root = root->right;
+        
     }
 }
-
 /**
  * CERINTA 4
  * TODO: Implementarea functiei pentru gasirea celui mai apropiat stramos comun(LCA) a doua noduri date(LCA)
