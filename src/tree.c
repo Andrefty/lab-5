@@ -38,7 +38,7 @@ TreeNode *createBalanced(int N, FILE *f)
  */
 void inorderIterative(TreeNode *root, TreeNode **arr, int size)
 {
-    
+
     int i = 0;
     Stack *S = createStack(size);
 
@@ -58,7 +58,6 @@ void inorderIterative(TreeNode *root, TreeNode **arr, int size)
             arr[i++] = root;
         }
         root = root->right;
-        
     }
     // int i=0;
     // Stack *S = createStack(size);
@@ -102,10 +101,8 @@ void deleteTree(TreeNode *root)
         if (root != NULL)
         {
             free(root);
-            
         }
         root = root->right;
-        
     }
 }
 /**
