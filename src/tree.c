@@ -98,10 +98,18 @@ void deleteTree(TreeNode *root)
         if (isEmpty(S))
             break;
         root = pop(S);
-        temp=root;
+        temp = root;
         root = root->right;
         if (temp != NULL)
         {
+            TreeNode *ant = peek(S);
+            if (ant != NULL)
+            {
+                if (ant->left == temp)
+                    ant->left = NULL;
+                if (ant->right == temp)
+                    ant->right = NULL;
+            }
             free(temp);
         }
     }
