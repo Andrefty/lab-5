@@ -151,6 +151,6 @@ TreeNode *LCA(TreeNode *root, TreeNode *n1, TreeNode *n2)
     for(int i=0; i<(sta1->top)+1 && i<(sta2->top)+1;i++)
     {
         if(sta1->arr[i]!=sta2->arr[i])
-        return sta1->arr[i-1];
+        return sta2->arr[i-1];
     }
 }
