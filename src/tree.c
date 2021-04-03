@@ -84,7 +84,7 @@ void inorderIterative(TreeNode *root, TreeNode **arr, int size)
  */
 void deleteTree(TreeNode *root)
 {
-    
+
     int i = 0;
     Stack *S = createStack(getNumberOfNodes(root));
     TreeNode *temp;
@@ -131,7 +131,7 @@ bool pathfind(TreeNode *rot, TreeNode *node, Stack **st)
     {
         return true;
     }
-    else if ((rot->left != NULL && pathfind(rot->left, node, st) == true) || (rot->right != NULL && pathfind(rot->right, node, st) == true))
+    if ((rot->left != NULL && pathfind(rot->left, node, st) == true) || (rot->right != NULL && pathfind(rot->right, node, st) == true))
     {
         return true;
     }
