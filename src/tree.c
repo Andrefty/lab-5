@@ -84,7 +84,7 @@ void inorderIterative(TreeNode *root, TreeNode **arr, int size)
  */
 void deleteTree(TreeNode *root)
 {
-    // TODO
+    
     int i = 0;
     Stack *S = createStack(getNumberOfNodes(root));
     TreeNode *temp;
@@ -148,9 +148,9 @@ TreeNode *LCA(TreeNode *root, TreeNode *n1, TreeNode *n2)
     Stack *sta2 = createStack(n);
     pathfind(cop1, n1, &sta1);
     pathfind(cop2, n2, &sta2);
-    for(int i=0; i<(sta1->top)+1 && i<(sta2->top)+1;i++)
+    for (int i = 0; i < (sta1->top) + 1 && i < (sta2->top) + 1; i++)
     {
-        if(sta1->arr[i]!=sta2->arr[i])
-        return sta2->arr[i-1];
+        if (sta1->arr[i] != sta2->arr[i])
+            return sta2->arr[i - 1];
     }
 }

@@ -42,7 +42,7 @@ int main()
 		if (isEmpty(G))
 			break;
 		temp = pop(G);
-		temp = root->right;
+		temp = temp->right;
 	}
 	return 0;
 }
