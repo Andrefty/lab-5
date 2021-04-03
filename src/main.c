@@ -29,20 +29,20 @@ int main()
 	}
 	printf("\n\n");
 	deleteTree(temp);
-	Stack *G = createStack(treeSize);
-	while (1)
-	{
-		while (temp)
-		{
+	// Stack *G = createStack(treeSize);
+	// while (1)
+	// {
+	// 	while (temp)
+	// 	{
 
-			printf("%d ", temp->val);
-			push(G, temp);
-			temp = temp->left;
-		}
-		if (isEmpty(G))
-			break;
-		temp = pop(G);
-		temp = temp->right;
-	}
+	// 		printf("%d ", temp->val);
+	// 		push(G, temp);
+	// 		temp = temp->left;
+	// 	}
+	// 	if (isEmpty(G))
+	// 		break;
+	// 	temp = pop(G);
+	// 	temp = temp->right;
+	// }
 	return 0;
 }
