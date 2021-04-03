@@ -32,17 +32,17 @@ int main()
 	Stack *G = createStack(treeSize);
 	while (1)
 	{
-		while (root)
+		while (temp)
 		{
 
-			printf("%d ", root->val);
-			push(G, root);
-			root = root->left;
+			printf("%d ", temp->val);
+			push(G, temp);
+			temp = temp->left;
 		}
 		if (isEmpty(G))
 			break;
-		root = pop(G);
-		root = root->right;
+		temp = pop(G);
+		temp = root->right;
 	}
 	return 0;
 }
