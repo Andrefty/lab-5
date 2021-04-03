@@ -122,7 +122,35 @@ void deleteTree(TreeNode *root)
  * @param n1 - nodul 1 pentru cautare LCA
  * @param n2 - nodul 2 pentru cautare LCA
  */
+
+bool pathfind(TreeNode *rot, TreeNode *node, Stack **st)
+{
+
+    push(*st, rot);
+    if (node == rot)
+    {
+        return true;
+    }
+    else if ((rot->left != NULL && pathfind(rot->left, node, st) == true) || (rot->right != NULL && pathfind(rot->right, node, st) == true))
+    {
+        return true;
+    }
+    pop(*st);
+    return false;
+}
 TreeNode *LCA(TreeNode *root, TreeNode *n1, TreeNode *n2)
 {
     // TODO
+    TreeNode *cop1 = root;
+    TreeNode *cop2 = root;
+    int n = getNumberOfNodes(cop1);
+    Stack *sta1 = createStack(n);
+    Stack *sta2 = createStack(n);
+    pathfind(cop1, n1, &sta1);
+    pathfind(cop2, n2, &sta2);
+    for(int i=0; i<(sta1->top)+1 && i<(sta2->top)+1;i++)
+    {
+        if(sta1->arr[i]!=sta2->arr[i])
+        return sta1->arr[i-1];
+    }
 }
