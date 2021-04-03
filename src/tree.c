@@ -159,8 +159,5 @@ TreeNode *LCA(TreeNode *root, TreeNode *n1, TreeNode *n2)
                 return sta2->arr[i - 1];
         }
     }
-    if(i==sta1->top+1)
         return sta1->arr[i-1];
-    if(i==sta2->top+1)
-        return sta2->arr[i-1];
 }
